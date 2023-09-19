@@ -9,18 +9,6 @@
     
 }
 
-header{
-    padding-bottom: 40px;
-    height: 125px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background-color: #72aa55;
-}
 
 body{
     background-color: rgb(159, 182, 83);
@@ -42,12 +30,7 @@ body{
     padding-left: 40px;
 }
 
-h1{
-    text-align: center;
-    padding: 20px;
-    font-size: 50px;
-    font-family: Shantell Sans;
-}
+
 
 video {
     height: 500px;
@@ -150,7 +133,7 @@ footer{
     background-color: aliceblue;
     margin: 10px;
     width: 350px;
-    height: 350px;
+    height: 500px;
     align-items: center;
     padding: 10px;
     transition: transform .2s;
@@ -164,7 +147,7 @@ footer{
 
 .img2{
     width: 300px;
-    height: auto;
+    height: 300px;
 }
 
 .container {
