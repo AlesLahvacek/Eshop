@@ -1,5 +1,5 @@
 let produkty = document.querySelector(".sell");
-let cena = +prompt(document.querySelector(".cena"));
+let cena = document.querySelector(".cena");
 let cena2;
 
 
@@ -10,10 +10,9 @@ let cislo = +prompt();
 
 
 
-
- for (let i = 0; i < 12; i++) {
-     cena2 = new cena2[cena.innerHTML];
- }
+// for (let i = 0; i < 12; i++) {
+//     cena2 = new cena2[cena.innerHTML];
+// }
 
 console.log(produkty);
  console.log(cena);
@@ -21,7 +20,7 @@ console.log(produkty);
  let value = cena[0];
  for (let i = 0; i < cena.length; i++) {
     
-     if (value < cena) {
+     if (value < parseInt(cena)) {
          value = cena[i];
      } else{
          let smol = value;
