@@ -9,6 +9,14 @@ let cislo = +prompt();
 
 
 
+const data = JSON.stringify(polozka.json);
+
+console.log((data));
+
+
+
+
+
 
 // for (let i = 0; i < 12; i++) {
 //     cena2 = new cena2[cena.innerHTML];
