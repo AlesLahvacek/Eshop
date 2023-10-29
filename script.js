@@ -1,21 +1,25 @@
+import polozka from './polozka.json' assert { type: 'json' };
+console.log("polozka"+1);
+let pocitani = 1;
+
+Object.keys(polozka["polozky"]).forEach(function(key) {
+    console.log(polozka["polozky"][key].jmeno);
+    let pokus = "polozka"+pocitani;
+    const znaceni = document.getElementById(pokus);
+    znaceni.innerText = (polozka["polozky"][key].jmeno);
+    pocitani++;
+});
+
+
+
 let produkty = document.querySelector(".sell");
 let cena = document.querySelector(".cena");
 let cena2;
 
+console.log(polozka.ananas.cena);
 
 let cislo = +prompt();
 //cena2 = 50 + cislo;
-
-
-
-
-const data = JSON.stringify(polozka.json);
-
-console.log((data));
-
-
-
-
 
 
 // for (let i = 0; i < 12; i++) {

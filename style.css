@@ -221,6 +221,10 @@ input[type="reset"]:hover {
     height: auto;
 }
 
+h3{
+    padding-top: 15px;
+}
+
 @media screen and (max-width:800px) {
     main{
         justify-content: center;

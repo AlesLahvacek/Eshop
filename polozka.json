@@ -1,7 +1,65 @@
 {
-    "predmet":{
-        "jmeno":"kebab",
-        "cena":"2000"
+"polozky":[
+    {
+        "jmeno":"jablko zelené 1kg",
+        "cena":"100",
+        "kod":"2023-A1"
+    },
+    {
+        "jmeno":"jablko červené 1kg",
+        "cena":"150",
+        "kod":"2023-A2"
+    },
+    {
+        "jmeno":"salát malý",
+        "cena":"75",
+        "kod":"2023-B1"
+    },
+    {
+        "jmeno":"salát velký",
+        "cena":"100",
+        "kod":"2023-B2" 
+    },
+    {
+        "jmeno":"hruška 1kg",
+        "cena":"125",
+        "kod":"2023-C1"
+    },
+    {
+        "jmeno":"meloun",
+        "cena":"200",
+        "kod":"2023-D1"
+    },
+    {
+        "jmeno":"ananas",
+        "cena":"200",
+        "kod":"2023-D2"
+    },
+    {
+        "jmeno":"hroznové víno zelené 1kg",
+        "cena":"150",
+        "kod":"2023-E1"
+    },
+    {
+        "jmeno":"hroznové víno červené 1kg",
+        "cena":"150",
+        "kod":"2023-E2"
+    },
+    {
+        "jmeno":"rajče 1kg",
+        "cena":"175",
+        "kod":"2023-F1"
+    },
+    {
+        "jmeno":"mrkev 1kg",
+        "cena":"125",
+        "kod":"2023-G1"
+    },
+    {
+        "jmeno":"okurka 1ks",
+        "cena":"40",
+        "kod":"2023-H1"
     }
+    ]
     
 }
