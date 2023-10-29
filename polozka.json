@@ -3,62 +3,74 @@
     {
         "jmeno":"jablko zelené 1kg",
         "cena":"100",
-        "kod":"2023-A1"
+        "kod":"2023-A1",
+        "img":"./images/golden.jpg"
     },
     {
         "jmeno":"jablko červené 1kg",
         "cena":"150",
-        "kod":"2023-A2"
+        "kod":"2023-A2",
+        "img":"./images/jablko cervene.jpg"
     },
     {
         "jmeno":"salát malý",
         "cena":"75",
-        "kod":"2023-B1"
+        "kod":"2023-B1",
+        "img":"./images/salat.jpg"
     },
     {
         "jmeno":"salát velký",
         "cena":"100",
-        "kod":"2023-B2" 
+        "kod":"2023-B2",
+        "img":"./images/salatV.jpg"
     },
     {
         "jmeno":"hruška 1kg",
         "cena":"125",
-        "kod":"2023-C1"
+        "kod":"2023-C1",
+        "img":"./images/hruska.jpg"
     },
     {
         "jmeno":"meloun",
         "cena":"200",
-        "kod":"2023-D1"
+        "kod":"2023-D1",
+        "img":"./images/meloun.jpg"
     },
     {
         "jmeno":"ananas",
         "cena":"200",
-        "kod":"2023-D2"
+        "kod":"2023-D2",
+        "img":"./images/ananas.jpg"
     },
     {
         "jmeno":"hroznové víno zelené 1kg",
         "cena":"150",
-        "kod":"2023-E1"
+        "kod":"2023-E1",
+        "img":"./images/vino.jpg"
     },
     {
         "jmeno":"hroznové víno červené 1kg",
         "cena":"150",
-        "kod":"2023-E2"
+        "kod":"2023-E2",
+        "img":"./images/vinoc.jpg"
     },
     {
         "jmeno":"rajče 1kg",
         "cena":"175",
-        "kod":"2023-F1"
+        "kod":"2023-F1",
+        "img":"./images/rajce.jpg"
     },
     {
         "jmeno":"mrkev 1kg",
         "cena":"125",
-        "kod":"2023-G1"
+        "kod":"2023-G1",
+        "img":"./images/mrkev.jpg"
     },
     {
         "jmeno":"okurka 1ks",
         "cena":"40",
-        "kod":"2023-H1"
+        "kod":"2023-H1",
+        "img":"./images/okurka.jpg"
     }
     ]
     
