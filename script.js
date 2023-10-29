@@ -4,9 +4,12 @@ let pocitani = 1;
 
 Object.keys(polozka["polozky"]).forEach(function(key) {
     console.log(polozka["polozky"][key].jmeno);
-    let pokus = "polozka"+pocitani;
-    const znaceni = document.getElementById(pokus);
+    let i = "polozka"+pocitani;
+    let x = "cena"+pocitani;
+    const znaceni = document.getElementById(i);
+    const urceniCeny = document.getElementById(x);
     znaceni.innerText = (polozka["polozky"][key].jmeno);
+    urceniCeny.innerText = polozka["polozky"][key].cena+" Kč";
     pocitani++;
 });
 
