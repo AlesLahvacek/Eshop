@@ -1,36 +1,67 @@
-// Při načtení stránky zobrazíme položky z LocalStorage
-window.onload = function() {
-    let kosik = document.getElementById('kosik');
-    let ulozenyKosik = JSON.parse(localStorage.getItem('kosik'));
-    if (ulozenyKosik) {
-        ulozenyKosik.forEach(function(polozka) {
-            let novyElement = document.createElement('div');
-            novyElement.innerText = polozka;
-            kosik.appendChild(novyElement);
-        });
+fetch("polozka.json").then(
+    function(response){
+        return response.json();
     }
-}
-
-// Přidáme událost kliknutí na každý <article>
-let polozky = document.getElementsByTagName('article');
-for (let i = 0; i < polozky.length; i++) {
-    polozky[i].addEventListener('click', function() {
-        let kosik = localStorage.getItem('kosik');
-        if (kosik) {
-            kosik = JSON.parse(kosik);
-        } else {
-            kosik = [];
+).then(
+    function(data){
+        localStorage.setItem("products", JSON.stringify(data));
+        if (!localStorage.getItem("cart")) {
+            localStorage.setItem("cart","[]");
         }
-        kosik.push(this.innerText);
-        localStorage.setItem('kosik', JSON.stringify(kosik));
+    }
+);
+
+let products = JSON.parse(localStorage.getItem("products"));
+
+let cart = JSON.parse(localStorage.getItem("cart"));
+console.log(products);
+function pridatDoKosiku(kod) {
+    let produkt = products.polozky.find(function(produkt){
+        return produkt.kod == kod;
     });
+    cart.push(produkt);
+    localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// Přidáme událost kliknutí na tlačítko pro vymazání košíku
-document.getElementById('vymazat').addEventListener('click', function() {
-    localStorage.removeItem('kosik');
-    let kosik = document.getElementById('kosik');
-    while (kosik.firstChild) {
-        kosik.removeChild(kosik.firstChild);
-    }
+
+
+let tlacitko = document.getElementById("vymazat");
+let kontejner = document.getElementById('kontejner');
+
+
+cart.forEach(function(produkt, index) {
+    let article = document.createElement('article');
+    article.className = 'sell';
+
+    let img = document.createElement('img');
+    img.className = 'img2';
+    img.src = produkt.img;
+    article.appendChild(img);
+
+    let h3 = document.createElement('h3');
+    h3.id = 'polozka' + (index + 1);
+    h3.textContent = produkt.jmeno;
+    article.appendChild(h3);
+
+    let div = document.createElement('div');
+
+    let a = document.createElement('a');
+    a.id = 'cena' + (index + 1);
+    a.className = 'cena';
+    a.textContent = produkt.cena;
+    div.appendChild(a);
+
+    article.appendChild(div);
+    kontejner.appendChild(article); 
+
+    
+});
+
+let vymazatButton = document.getElementById('vymazat');
+
+// Přidáme posluchač události 'click' na tlačítko
+vymazatButton.addEventListener('click', function() {
+    // Smažeme obsah 'cart' v localStorage
+    localStorage.removeItem('cart');
+    location.reload();
 });

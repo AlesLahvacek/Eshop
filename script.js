@@ -11,6 +11,7 @@ Object.keys(polozka["polozky"]).forEach(function(key) {
     let i = "polozka"+pocitani;
     let x = "cena"+pocitani;
     document.getElementsByTagName("img")[pocitani-1].setAttribute("src", polozka["polozky"][key].img);
+    document.getElementsByTagName("article")[pocitani-1].setAttribute("data-kod", polozka["polozky"][key].kod);
     const znaceni = document.getElementById(i);
     const urceniCeny = document.getElementById(x);
     znaceni.innerText = polozka["polozky"][key].jmeno;
@@ -41,37 +42,39 @@ tlacitko.addEventListener("click", function() {
 });
 
 
+fetch("polozka.json").then(
+    function(response){
+        return response.json();
+    }
+).then(
+    function(data){
+        localStorage.setItem("products", JSON.stringify(data));
+        if (!localStorage.getItem("cart")) {
+            localStorage.setItem("cart","[]");
+        }
+    }
+);
 
+let products = JSON.parse(localStorage.getItem("products"));
 
+let cart = JSON.parse(localStorage.getItem("cart"));
+console.log(products);
+function pridatDoKosiku(kod) {
+    let produkt = products.polozky.find(function(produkt){
+        return produkt.kod == kod;
+    });
+    cart.push(produkt);
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
 
+let articles = document.querySelectorAll('.sell');
 
-console.log(iCena);
-
-
-
-
-
-
-//let cislo = +prompt();
-//cena2 = 50 + cislo;
-
-
-// for (let i = 0; i < 12; i++) {
-//     cena2 = new cena2[cena.innerHTML];
-// }
-
-console.log(produkty);
- console.log(cena);
- console.log(cena2);
- let value = cena[0];
- for (let i = 0; i < cena.length; i++) {
-    
-     if (value < parseInt(cena)) {
-         value = cena[i];
-     } else{
-         let smol = value;
-         console.log(smol);
-     }
-    
- }
+// Pro každý prvek <article> přidáme posluchače události 'click'
+articles.forEach(function(article) {
+    article.addEventListener('click', function() {
+        // Předpokládáme, že kód produktu je uložen jako data atribut 'data-kod'
+        let kod = article.dataset.kod;
+        pridatDoKosiku(kod);
+    });
+});
 
