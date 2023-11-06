@@ -30,7 +30,11 @@ body{
     padding-left: 40px;
 }
 
-
+button{
+    height: 75px;
+    width: 200px;
+    font-size: 20px;
+}
 
 video {
     height: 500px;
@@ -126,7 +130,16 @@ footer{
     
 }
 
+#kontejner{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    padding-left: 50px;
+
+}
+
 .sell{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -196,7 +209,7 @@ textarea {
 
 .button {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 }
 
 input[type="submit"],
@@ -258,3 +271,16 @@ h3{
     }
 }
 
+#kosik {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+a{
+    height: 75px;
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
