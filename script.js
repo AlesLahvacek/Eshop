@@ -1,10 +1,10 @@
 import polozka from './polozka.json' assert { type: 'json' };
-console.log("polozka"+1);
+//console.log("polozka"+1);
 let pocitani = 1;
 let sestupne = true;
 
-const att = document.createAttribute("src");
-let iCena = new Array(12);
+//const att = document.createAttribute("src");
+
 
 Object.keys(polozka["polozky"]).forEach(function(key) {
     console.log(polozka["polozky"][key].jmeno);
@@ -16,13 +16,7 @@ Object.keys(polozka["polozky"]).forEach(function(key) {
     const urceniCeny = document.getElementById(x);
     znaceni.innerText = polozka["polozky"][key].jmeno;
     urceniCeny.innerText = polozka["polozky"][key].cena+" Kč";
-
- 
-
-    pocitani++;
-    
-    iCena = [polozka["polozky"][key].cena];
-    
+    pocitani++;  
 });
 
 let tlacitko = document.getElementById("tlacitko");
