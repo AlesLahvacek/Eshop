@@ -70,10 +70,9 @@ function pridatDoKosiku(kod) {
 
 let articles = document.querySelectorAll('.sell');
 
-// Pro každý prvek <article> přidáme posluchače události 'click'
+
 articles.forEach(function(article) {
     article.addEventListener('click', function() {
-        // Předpokládáme, že kód produktu je uložen jako data atribut 'data-kod'
         let kod = article.dataset.kod;
         pridatDoKosiku(kod);
     });
