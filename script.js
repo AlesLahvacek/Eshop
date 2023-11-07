@@ -65,6 +65,7 @@ function pridatDoKosiku(kod) {
     });
     cart.push(produkt);
     localStorage.setItem("cart", JSON.stringify(cart));
+    window.alert("Položka přidána do košíku");
 }
 
 let articles = document.querySelectorAll('.sell');
