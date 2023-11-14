@@ -42,23 +42,23 @@ fetch("polozka.json").then(
     }
 ).then(
     function(data){
-        localStorage.setItem("products", JSON.stringify(data));
-        if (!localStorage.getItem("cart")) {
-            localStorage.setItem("cart","[]");
+        sessionStorage.setItem("products", JSON.stringify(data));
+        if (!sessionStorage.getItem("cart")) {
+            sessionStorage.setItem("cart","[]");
         }
     }
 );
 
-let products = JSON.parse(localStorage.getItem("products"));
+let products = JSON.parse(sessionStorage.getItem("products"));
 
-let cart = JSON.parse(localStorage.getItem("cart"));
+let cart = JSON.parse(sessionStorage.getItem("cart"));
 console.log(products);
 function pridatDoKosiku(kod) {
     let produkt = products.polozky.find(function(produkt){
         return produkt.kod == kod;
     });
     cart.push(produkt);
-    localStorage.setItem("cart", JSON.stringify(cart));
+    sessionStorage.setItem("cart", JSON.stringify(cart));
     window.alert("Položka přidána do košíku");
 }
 
